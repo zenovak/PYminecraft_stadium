@@ -10,6 +10,7 @@ def _build_line(width: number, length: number, blockID: number):
         builder.move(LEFT, 1)
 
 def builder_centre():
+    """centres the builder at initial displacement"""
     builder.teleport_to_origin()
     builder.move(LEFT, 12)
     builder.move(FORWARD, 13)
@@ -40,16 +41,12 @@ def on_on_chat2():
         builder.turn(LEFT_TURN)
 
     # Build the track lines
-    builder.teleport_to_origin()
-    builder.move(LEFT, 12)
-    builder.move(FORWARD, 13)
+    builder_centre()
     for i in range(0, 21, 3):
         shapes.circle(WHITE_CONCRETE, builder.position(), 24 + i, Axis.Y, ShapeOperation.OUTLINE)
 
     # The walls
-    builder.teleport_to_origin()
-    builder.move(LEFT, 12)
-    builder.move(FORWARD, 13)
+    builder_centre()
     for i in range(20):
         shapes.circle(WHITE_CONCRETE, builder.position(), TOTAL_AREA, Axis.Y, ShapeOperation.OUTLINE)
         builder.move(UP, 1)
@@ -58,14 +55,14 @@ def on_on_chat2():
     builder_centre()
     builder.move(UP, 10)
     for i in range(7):
-        builder.move(UP, 1)
         shapes.circle(OAK_WOOD_SLAB, builder.position(), 43 + i, Axis.Y, ShapeOperation.OUTLINE)
+        builder.move(UP, 1)
 
     # Dome
     builder_centre()
     builder.move(UP, 20)
     for i in range(0, 18):
-        if (i < 15):
+        if (i < 10):
             builder.move(UP, 1)
         shapes.circle(GLASS, builder.position(), TOTAL_AREA - i, Axis.Y, ShapeOperation.OUTLINE)
 
