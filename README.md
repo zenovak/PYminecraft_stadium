@@ -6,6 +6,7 @@ To use the code, simply go to minecraft, open code, then select python. Copy and
 
 # Alternatively
 
-Just import the project file. You can download it here: /n
+Just import the project file. You can download it here: 
+<br>
 https://github.com/Zenovak/PYminecraft_stadium/releases/tag/MinecraftWorld
 
