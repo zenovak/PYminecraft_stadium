@@ -4,7 +4,6 @@ To use the code, simply go to minecraft, open code, then select python. Copy and
 
 <br>
 
----
 # Alternatively
 
 Just import the project file:
